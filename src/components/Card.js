@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Rating from './Rating';
 
 const Card = (props) => {
-    const {image, name, price, reviews} = props;
+    const {image, name, price, reviews, rating} = props;
     return (
         <div className="max-w-xs my-2 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
@@ -13,13 +13,7 @@ const Card = (props) => {
                     <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                 </a>
                 <div className="flex items-center mt-2.5 mb-5">
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-
-
+                <Rating value={rating} />
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{reviews}</span>
                 </div>
                 <div className="flex justify-between items-center">

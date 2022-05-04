@@ -12,6 +12,7 @@ const Gallery = () => {
                     name = {product.name}
                     reviews = {product.numReviews}
                     price={product.price}
+                    rating = {product.rating}
                     />
                 })
             }
